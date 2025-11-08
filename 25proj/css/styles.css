@@ -1,0 +1,363 @@
+/* 
+  Group Members: Luis Garcia, MATTHEW V. BALINADO, ANDREA KIRSTEN SALENGUA, B-REAL DELA PASION
+  File Name: styles.css
+  Date: 11/07/2025
+*/
+
+/*  CSS Reset  */
+body, header, nav, main, footer, h1, h2, h3, h4, p, ul, li, img,
+section, article, aside, figure, figcaption {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+/* Global Styles */
+body {
+  font-family: 'Lora', serif;
+  background-color: #f5f5f5;
+  color: #222;
+  line-height: 1.6;
+}
+
+/* Responsive images + rounded corners */
+img {
+  max-width: 100%;
+  display: block;
+  margin: 1em auto;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0,0,0,0.3); 
+}
+
+/*  Header Styles  */
+header {
+  background-color: #00274d;
+  color: #ffd700;
+  text-align: center;
+  padding: 1em;
+  font-family: 'Poppins', sans-serif;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+
+/*  Navigation Styles  */
+nav ul {
+  list-style-type: none;
+  background-color: #004080;
+  text-align: center;
+  padding: 0.5em 0;
+}
+
+nav li {
+  display: inline-block;
+  margin: 0 1em;
+}
+
+/* Structural pseudo-class */
+nav li:first-child {
+  background-color: #003366;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  font-family: 'Poppins', sans-serif;
+  padding: 0.5em 1em;
+  border-radius: 5px;
+}
+
+/* Dynamic pseudo-class (hover) */
+nav a:hover {
+  background-color: #001f3f;
+  color: #ffd700;
+}
+
+/* Main Styles  */
+main {
+  padding: 2em;
+  background-color: #ffffff;
+  border-radius: 10px;
+  margin: 1em;
+}
+
+/* Two-column layout base class */
+.two-column {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5em;
+}
+
+/*  Footer Styles  */
+footer {
+  background-color: #00274d;
+  color: #fff;
+  text-align: center;
+  padding: 1em;
+  font-family: 'Poppins', sans-serif;
+}
+
+footer a {
+  color: #ffd700;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* MOBILE VIEWPORT STYLES */
+
+@media screen and (max-width: 600px) {
+  header h1 {
+    font-size: 1.4em;
+  }
+
+  nav ul {
+    display: flex;
+    flex-direction: column;
+  }
+
+  nav li {
+    margin: 0.5em 0;
+  }
+
+  main {
+    padding: 1em;
+  }
+
+  footer {
+    font-size: 0.9em;
+  }
+}
+
+/*  TABLET VIEWPORT STYLES */
+
+@media screen and (min-width: 601px) and (max-width: 999px) {
+  body {
+    background: linear-gradient(#f5f5f5, #cce0ff); 
+  }
+
+  header {
+    font-size: 1.2em;
+  }
+
+  nav ul {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  main {
+    width: 90%;
+    margin: 1em auto;
+  }
+
+  .two-column {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* DESKTOP VIEWPORT STYLES */
+
+@media screen and (min-width: 1000px) and (max-width: 1919px) {
+  body {
+    background: linear-gradient(90deg, #00274d, #004080); 
+    color: #f5f5f5;
+  }
+
+  header {
+    background-color: #001a33;
+  }
+
+  nav ul {
+    background-color: transparent;
+  }
+
+  nav a {
+    color: #ffd700;
+  }
+
+  /* Dynamic pseudo-class on desktop */
+  nav a:hover {
+    background-color: #ffd700;
+    color: #00274d;
+    transition: all 0.3s ease;
+  }
+
+  main {
+    width: 75%;
+    margin: 2em auto;
+    background-color: rgba(255, 255, 255, 0.9);
+    color: #111;
+  }
+
+  .two-column {
+    grid-template-columns: 2fr 1fr;
+  }
+}
+
+/*  LARGE DESKTOP VIEWPORT STYLES */
+
+@media screen and (min-width: 1920px) {
+  body {
+    background: linear-gradient(to right, #001a33, #004080, #00274d);
+  }
+
+  main {
+    width: 60%;
+  }
+
+  footer {
+    font-size: 1.1em;
+  }
+}
+
+/* PRINT STYLES */
+@media print {
+  header, nav, footer {
+    display: none;
+  }
+
+  main {
+    color: #000;
+    background: #fff;
+  }
+
+  body {
+    font-family: "Times New Roman", serif;
+  }
+}
+/*  GRID LAYOUT  */
+.grid-layout {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 2em;
+  padding: 2em;
+}
+
+/* Span one element across two columns */
+.highlight {
+  grid-column: span 2;
+  background-color: rgba(255, 215, 0, 0.1);
+  padding: 1em;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+/* Opacity and shadows */
+article img {
+  opacity: 0.95;
+  transition: opacity 0.3s ease;
+}
+
+article img:hover {
+  opacity: 1;
+}
+
+/* Text Shadow Example */
+header h1 {
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.4);
+}
+
+/* Box Shadow Example */
+footer {
+  box-shadow: 0 -4px 8px rgba(0,0,0,0.3);
+}
+/*  FIGURE IMAGE EFFECTS  */
+figure img {
+  filter: brightness(0.9) contrast(1.1);
+}
+
+/* TABLE STYLES */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 2em 0;
+}
+
+caption {
+  font-weight: bold;
+  margin-bottom: 1em;
+  text-align: center;
+}
+
+th, td {
+  border: 1px solid #2a1f14;
+  padding: 0.75em;
+  text-align: center;
+}
+
+th {
+  background-color: #2a1f14;
+  color: #fff;
+}
+
+tr:nth-child(even) {
+  background-color: #f6eee4;
+}
+
+tr:nth-child(odd) {
+  background-color: #deccba;
+}
+
+/* Hide table for mobile viewport */
+@media screen and (max-width: 620px) {
+  table {
+    display: none;
+  }
+  .mobile-table-info {
+    display: block;
+    background-color: #f6eee4;
+    padding: 1em;
+    border-radius: 10px;
+  }
+}
+
+/* FORM STYLES*/
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  background-color: #f6eee4;
+  padding: 2em;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+label {
+  font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+select,
+textarea {
+  width: 100%;
+  padding: 0.75em;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1em;
+}
+
+input[type="submit"] {
+  background-color: #2a1f14;
+  color: white;
+  border: none;
+  padding: 1em;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background-color: #78593a;
+}
+
+/* Tablet and desktop adjustments */
+@media screen and (min-width: 768px) {
+  form {
+    width: 60%;
+  }
+}
